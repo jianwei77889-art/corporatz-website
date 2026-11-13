@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corporatz Industrial · 工厂与工业地一站式服务</title>
+<meta name="description" content="Corporatz Industrial — 1 Stop Service for Industrial Factory and Land (Subsales & Project). Puchong · Sepang · Balakong · Subang Jaya · Shah Alam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0606;--bg2:#120909;--red:#8f1414;--red2:#c8231f;--cream:#f4ece4;--mut:#a4948c;--line:rgba(244,236,228,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:"Noto Sans SC",system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.mono{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:linear-gradient(#0a0606ee,#0a060600)}
+nav .brand{line-height:1.5}
+nav .brand b{display:block;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.25em}
+nav .right{display:flex;gap:18px;align-items:center}
+.btn{display:inline-block;border:1px solid var(--red2);color:var(--cream);padding:9px 18px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;transition:.2s}
+.btn:hover,.btn.fill{background:var(--red2)}
+/* hero */
+.hero{min-height:100vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:110px 24px 60px;background:radial-gradient(900px 600px at 78% 40%,#5a0d0d 0,transparent 65%),radial-gradient(700px 500px at 10% 100%,#2a0808 0,transparent 70%),var(--bg)}
+.big{font-family:Anton,Impact,sans-serif;font-size:clamp(52px,14vw,230px);white-space:nowrap;line-height:.82;letter-spacing:-.01em;color:var(--cream);text-shadow:0 0 60px rgba(200,35,31,.25)}
+.big.outline{color:transparent;-webkit-text-stroke:1.5px rgba(244,236,228,.55)}
+.hero .sub{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;align-items:flex-end;margin-top:36px}
+.hero .spec .mono{color:var(--mut)}
+.hero .spec .bar{width:240px;height:1px;background:var(--line);margin:10px 0 16px;position:relative}
+.hero .spec .bar:after{content:"";position:absolute;left:0;top:-2px;width:6px;height:5px;background:var(--red2)}
+.hero .spec h2{font-weight:500;font-size:clamp(20px,2.6vw,30px);letter-spacing:.12em}
+.hero .spec h2 span{color:var(--mut);margin:0 10px}
+.card{border:1px solid var(--line);padding:18px 22px;min-width:200px;background:rgba(10,6,6,.6);text-align:right}
+.card b{display:block;font-family:"JetBrains Mono",monospace;letter-spacing:.3em;font-size:13px;margin:6px 0 12px}
+.barcode{height:26px;background:repeating-linear-gradient(90deg,var(--cream) 0 2px,transparent 2px 4px,var(--cream) 4px 5px,transparent 5px 8px,var(--cream) 8px 11px,transparent 11px 13px)}
+.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--mut)}
+/* sections */
+section{padding:110px 0;border-top:1px solid var(--line)}
+.tag{color:var(--red2)}
+.h{font-family:Anton,Impact,sans-serif;font-size:clamp(56px,10vw,130px);line-height:.88;margin:14px 0 34px}
+.h .o{color:transparent;-webkit-text-stroke:1.2px rgba(244,236,228,.6)}
+.grid2{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+.lead{font-size:18px;color:#e6dbd2}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chips span{border:1px solid var(--line);padding:6px 14px;font-size:14px}
+.stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.stats>div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 22px}
+.stats b{font-family:Anton,sans-serif;font-size:46px;line-height:1;display:block;color:var(--cream)}
+.stats b small{font-size:22px;color:var(--red2)}
+.stats p{color:var(--mut);font-size:14px;margin-top:8px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.svc>div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 26px;transition:.25s}
+.svc>div:hover{background:linear-gradient(160deg,#3a0b0b,transparent)}
+.svc .n{font-family:"JetBrains Mono",monospace;color:var(--red2);font-size:12px}
+.svc h3{font-size:22px;margin:10px 0 8px}
+.svc p{color:var(--mut);font-size:15px}
+/* team */
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.member{position:relative;aspect-ratio:3/4;border:1px solid var(--line);background:radial-gradient(200px 220px at 50% 35%,#4a0f0f,transparent 70%),var(--bg2);display:flex;flex-direction:column;justify-content:flex-end;padding:18px;overflow:hidden}
+.member .ini{position:absolute;top:10px;left:14px;font-family:Anton,sans-serif;font-size:92px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(244,236,228,.22)}
+.member h4{font-family:Anton,sans-serif;font-size:clamp(17px,2vw,24px);overflow-wrap:anywhere;letter-spacing:.02em;line-height:1.05;font-weight:400}
+.member .mono{color:var(--mut);margin-top:6px;font-size:10px}
+.member.lead-m{border-color:var(--red2)}
+/* videos */
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.vid{border:1px solid var(--line);background:#000}
+.vid .frame{position:relative;aspect-ratio:9/16;background:#110808}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid .cap{padding:14px 16px;border-top:1px solid var(--line)}
+.vid .cap .mono{color:var(--red2);font-size:10px}
+.vid .cap h4{font-size:16px;font-weight:500;margin-top:4px}
+.more{margin-top:26px;text-align:center}
+/* protocol */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.steps>div{padding:30px 22px 10px 0;border-right:1px solid var(--line);padding-left:22px}
+.steps>div:first-child{padding-left:0}
+.steps>div:last-child{border-right:0}
+.steps .num{font-family:Anton,sans-serif;font-size:58px;color:transparent;-webkit-text-stroke:1px var(--red2);line-height:1}
+.steps h3{font-size:20px;margin:12px 0 6px}
+.steps p{color:var(--mut);font-size:15px}
+.who{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:46px}
+.who>div{border:1px solid var(--line);padding:24px}
+.who h4{font-size:18px;margin-bottom:10px}
+.who li{color:var(--mut);font-size:15px;margin-left:18px}
+/* areas */
+.areas{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line)}
+.areas span{flex:1 1 auto;white-space:nowrap;padding-right:28px;border-bottom:1px solid var(--line);padding:22px 0;font-family:Anton,sans-serif;font-size:clamp(30px,4vw,48px);letter-spacing:.01em}
+.areas span:nth-child(odd){color:transparent;-webkit-text-stroke:1px rgba(244,236,228,.6)}
+/* contact */
+.contact{text-align:center;padding:140px 0 120px;background:radial-gradient(700px 400px at 50% 20%,#4d0c0c,transparent 70%)}
+.contact .h{margin:18px 0 10px}
+.contact .row{display:flex;justify-content:center;flex-wrap:wrap;gap:46px;margin:46px 0}
+.contact .row>div{text-align:left}
+.contact .row .mono{color:var(--mut)}
+.contact .row b{display:block;font-size:20px;font-weight:500;margin-top:4px}
+footer{border-top:1px solid var(--line);padding:22px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--mut)}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:30;background:#25D366;color:#06210f;font-weight:700;padding:12px 18px;border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.5);font-size:14px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (max-width:900px){.grid2,.who{grid-template-columns:1fr}.svc{grid-template-columns:1fr 1fr}.team{grid-template-columns:repeat(2,1fr)}.vids{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.steps>div{border-right:0;padding-left:0}}
+@media (max-width:560px){.svc,.vids{grid-template-columns:1fr}nav .right .mono{display:none}.hero .sub{gap:24px}.card{text-align:left}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top"><b>CORPORATZ</b><span class="mono" style="color:var(--mut)">Industrial</span></a>
+  <div class="right"><span class="mono">2026 →</span><a class="btn" href="https://wa.me/60102773860" target="_blank" rel="noopener">WhatsApp</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap" style="width:100%">
+    <div class="mono" style="color:var(--mut);margin-bottom:18px">Industrial Factory &amp; Land · Subsales &amp; Project</div>
+    <div class="big">CORPORATZ</div>
+    <div class="big outline">INDUSTRIAL</div>
+    <div class="sub">
+      <div class="spec">
+        <div class="mono">Specialized in</div>
+        <div class="bar"></div>
+        <h2>工厂<span>/</span>工业地<span>/</span>新项目</h2>
+      </div>
+      <div class="card">
+        <div class="mono" style="color:var(--mut)">Team of</div>
+        <b>FIVE</b>
+        <div class="barcode"></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll mono">Scroll</div>
+</header>
+
+<section id="about">
+  <div class="wrap grid2">
+    <div class="reveal">
+      <div class="mono tag">// About us</div>
+      <div class="h">ABOUT<br><span class="o">US</span></div>
+      <p class="lead">我们是 Corporatz Industrial，一支只做工业产业的团队。买厂、卖厂、租厂、找工业地，还是看新项目，从找盘、看厂、谈价到成交，一个团队帮你跟到底。</p>
+      <p class="lead" style="margin-top:16px;color:var(--mut)">我们每天都在 Puchong 一带的工业区跑，哪一排厂有什么、哪个屋主想放，我们比较清楚。你只要告诉我们需要多大、预算多少，剩下的我们来。</p>
+      <div class="chips"><span>工厂买卖</span><span>工厂出租</span><span>工业地</span><span>新项目</span><span>Data Center 找厂</span></div>
+    </div>
+    <div class="stats reveal">
+      <div><b>05</b><p>团队成员，各自跟进不同区域</p></div>
+      <div><b>06</b><p>语言：华语、英语、广东话、福建话、客家话、马来话</p></div>
+      <div><b>05<small>+</small></b><p>服务地区：Puchong、Sepang、Balakong、Subang Jaya、Shah Alam</p></div>
+      <div><b>TOP<small>20</small></b><p>PMCB Rising Stars · October 2026</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="mono tag">// What we do</div>
+      <div class="h">ONE <span class="o">STOP</span></div>
+    </div>
+    <div class="svc reveal">
+      <div><div class="n">01</div><h3>买厂</h3><p>按你的面积、高度、电力和预算筛选，带你一次看完合适的单位。</p></div>
+      <div><div class="n">02</div><h3>卖厂</h3><p>先帮你看附近最近的成交价，定一个卖得出去的价钱，再找对的买家。</p></div>
+      <div><div class="n">03</div><h3>租厂</h3><p>屋主找租客、租客找厂房都可以。租约、按金和交屋，我们帮你顾好。</p></div>
+      <div><div class="n">04</div><h3>工业地</h3><p>找地建厂或出售工业地，帮你查地契、用途和周边规划。</p></div>
+      <div><div class="n">05</div><h3>新项目</h3><p>发展商的新工业项目，帮你比较价钱、规格和付款方式。</p></div>
+      <div><div class="n">06</div><h3>大型厂房</h3><p>Data Center、物流仓库这类大面积需求，我们帮你整理规格，一起找。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="mono tag">// The team</div>
+      <div class="h">THE <span class="o">TEAM</span></div>
+    </div>
+    <div class="team reveal">
+      <div class="member lead-m"><div class="ini">SO</div><h4>SAM<br>ONG</h4><div class="mono">联络人 · 010-277 3860</div></div>
+      <div class="member"><div class="ini">JC</div><h4>JASON<br>CHEN</h4><div class="mono">Corporatz Team</div></div>
+      <div class="member"><div class="ini">JL</div><h4>JONATHAN<br>LEE</h4><div class="mono">Corporatz Team</div></div>
+      <div class="member"><div class="ini">LS</div><h4>LEONG<br>SZE HAN</h4><div class="mono">Corporatz Team</div></div>
+      <div class="member"><div class="ini">JL</div><h4>JACKSON<br>LEONG</h4><div class="mono">Corporatz Team</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="mono tag">// Video archive</div>
+      <div class="h">VIDEO <span class="o">ARCHIVE</span></div>
+      <p class="lead" style="max-width:640px;margin-bottom:34px">我们把每天看厂、带客、谈案子的过程拍下来。看完，你会知道我们怎么做事。</p>
+    </div>
+    <div class="vids reveal" id="vids"></div>
+    <div class="more"><a class="btn" href="https://www.facebook.com/profile.php?id=61559460783280&sk=reels_tab" target="_blank" rel="noopener">看更多影片 →</a></div>
+  </div>
+</section>
+
+<section id="protocol">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="mono tag">// How it works</div>
+      <div class="h">PRO<span class="o">TOCOL</span></div>
+    </div>
+    <div class="steps reveal">
+      <div><div class="num">01</div><h3>先聊需求</h3><p>WhatsApp 告诉我们你要买、卖还是租，需要多大、在哪一区、预算多少。</p></div>
+      <div><div class="num">02</div><h3>配对和估价</h3><p>从我们手上的盘源和屋主名单找合适的单位；要卖的，先给你附近的成交价参考。</p></div>
+      <div><div class="num">03</div><h3>带看</h3><p>安排一次看完几间，现场帮你看高度、电力、出入口和货车进出。</p></div>
+      <div><div class="num">04</div><h3>谈判到成交</h3><p>帮你谈价、准备 offer、跟律师和银行，一直跟到交钥匙。</p></div>
+    </div>
+    <div class="who reveal">
+      <div><h4>买家 / 租客</h4><ul><li>告诉我们规格和预算</li><li>我们筛选、安排看厂</li><li>谈好价钱，跟进到交屋</li></ul></div>
+      <div><h4>屋主 / 卖家</h4><ul><li>免费帮你估一个合理的价钱</li><li>拍照、拍影片、打广告</li><li>过滤买家，只带认真的来看</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="mono tag">// Where we work</div>
+      <div class="h">AREAS</div>
+    </div>
+    <div class="areas reveal"><span>PUCHONG</span><span>SEPANG</span><span>BALAKONG</span><span>SUBANG JAYA</span><span>SHAH ALAM</span></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="mono" style="color:var(--mut)">Corporatz Industrial · Ready for your factory</div>
+    <div class="h">找厂、卖厂，<br><span class="o">先问我们。</span></div>
+    <div class="row">
+      <div><div class="mono">WhatsApp · Sam Ong</div><b>010-277 3860</b></div>
+      <div><div class="mono">Facebook</div><b><a href="https://www.facebook.com/profile.php?id=61559460783280" target="_blank" rel="noopener">Corporatz Industrial</a></b></div>
+      <div><div class="mono">Office</div><b>Jalan Puchong, 47100 Puchong</b></div>
+    </div>
+    <a class="btn fill" href="https://wa.me/60102773860?text=Hi%20Corporatz%2C%20%E6%88%91%E6%83%B3%E9%97%AE%E5%B7%A5%E5%8E%82" target="_blank" rel="noopener">WhatsApp 我们 →</a>
+  </div>
+</section>
+
+<footer class="mono"><span>Corporatz Industrial · 2026</span><span>Puchong · Selangor · Malaysia</span></footer>
+<a class="wa-float" href="https://wa.me/60102773860" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+const V=[
+ ["1782353919651759","屋主必看","房东必看：租客付了钱，屋主却没收到？"],
+ ["2596579514186789","团队日常","入行两周，Jackson 第一次带看工厂"],
+ ["1951150752720069","盘源","最新 JUMBO 排厂：大、高、宽"],
+ ["1646021370242136","Data Center · Part 2","帮 Data Center 顾客找厂：这间更适合？"],
+ ["1819806489348582","Data Center · Part 1","帮 Data Center 顾客找厂：一起看大厂"],
+ ["1493227379393384","团队日常","Daily Real Estate Work"]
+];
+document.getElementById("vids").innerHTML=V.map(([id,t,h],i)=>`<div class="vid"><div class="frame"><iframe loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen title="${h}" src="https://www.facebook.com/plugins/video.php?href=${encodeURIComponent("https://www.facebook.com/reel/"+id+"/")}&show_text=false&width=320"></iframe></div><div class="cap"><div class="mono">${String(i+1).padStart(2,"0")} · ${t}</div><h4>${h}</h4><a class="mono" style="color:var(--mut);display:inline-block;margin-top:6px" href="https://www.facebook.com/reel/${id}/" target="_blank" rel="noopener">在 Facebook 看 →</a></div></div>`).join("");
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
